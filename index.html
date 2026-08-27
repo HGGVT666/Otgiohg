@@ -3,341 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ớt Gió Ngâm Dấm Nho Quế Hà Giang</title>
+<title>Ớt Gió Ngâm Dấm Nho Quế | Hà Giang</title>
 
 <style>
-
-*{
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
 margin:0;
-background:#fffaf0;
-color:#333;
+font-family:Arial,Helvetica,sans-serif;
+color:#253329;
+background:#fffaf0
 }
-
-
+.container{
+max-width:1180px;
+margin:auto;
+padding:0 24px
+}
 .hero{
-
-min-height:700px;
-
-display:flex;
-
-align-items:center;
-
-padding:70px 8%;
-
-background-image:
-linear-gradient(
-rgba(255,250,240,0.72),
-rgba(255,250,240,0.88)
-),
-url("./images/vung-nguyen-lieu.jpg");
-
-background-size:cover;
-
-background-position:center;
-
+padding:70px 0;
+background:linear-gradient(135deg,#fffdf6,#fff8e8)
 }
-
-
-.left{
-
-width:55%;
-
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:center
 }
-
-
-.right{
-
-width:45%;
-
-text-align:center;
-
-}
-
-
 .badge{
-
-background:white;
-
-color:#17643b;
-
-padding:8px 18px;
-
-border-radius:30px;
-
-font-weight:bold;
-
 display:inline-block;
-
-}
-
-
-
-h1{
-
-font-size:58px;
-
-line-height:1;
-
-color:#d93625;
-
-margin:25px 0;
-
-}
-
-
-
-.sub{
-
-font-size:25px;
-
-font-weight:bold;
-
-color:#17643b;
-
-}
-
-
-
-.desc{
-
-font-size:18px;
-
-line-height:1.6;
-
-}
-
-
-
-.price{
-
-font-size:42px;
-
-font-weight:bold;
-
-color:#d93625;
-
-margin:25px 0;
-
-}
-
-
-
-.btn{
-
-background:#d93625;
-
-color:white;
-
-padding:18px 35px;
-
-border-radius:10px;
-
-border:0;
-
-font-size:18px;
-
-font-weight:bold;
-
-}
-
-
-
-.product{
-
-width:90%;
-
-max-width:430px;
-
-border-radius:20px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.25);
-
-}
-
-
-
-.chili{
-
-width:130px;
-
-margin-top:20px;
-
-}
-
-
-
-.section{
-
-padding:60px 8%;
-
-text-align:center;
-
-}
-
-
-
-.section h2{
-
-color:#17643b;
-
-font-size:36px;
-
-}
-
-
-
-.cards{
-
-display:flex;
-
-gap:25px;
-
-}
-
-
-
-.card{
-
+padding:10px 16px;
+border-radius:30px;
 background:white;
-
-padding:30px;
-
-border-radius:15px;
-
-flex:1;
-
-box-shadow:0 5px 20px #ddd;
-
+border:1px solid #e9dfc9;
+color:#12633b;
+font-weight:bold
 }
-
-
+h1{
+margin:22px 0 16px;
+font-size:58px;
+line-height:.98;
+color:#d93625;
+letter-spacing:-2px
+}
+.lead{
+font-size:24px;
+line-height:1.35;
+color:#12633b;
+font-weight:bold
+}
+.desc{
+font-size:18px;
+line-height:1.6;
+color:#59625d
+}
+.price{
+font-size:42px;
+font-weight:800;
+color:#d93625;
+margin:25px 0
+}
+.price span{
+font-size:20px;
+color:#69716c
+}
+.btn{
+display:inline-block;
+background:#d93625;
+color:white;
+text-decoration:none;
+border:0;
+border-radius:12px;
+padding:17px 28px;
+font-size:18px;
+font-weight:800;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(217,54,37,.18)
+}
+.hero-img{
+width:100%;
+aspect-ratio:4/3;
+object-fit:cover;
+display:block;
+border-radius:22px;
+box-shadow:0 20px 50px rgba(46,55,43,.18)
+}
+section{padding:70px 0}
+.section-title{
+text-align:center;
+color:#12633b;
+font-size:38px;
+margin:0 0 38px
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+.card{
+background:white;
+border:1px solid #eee5d4;
+border-radius:18px;
+padding:30px;
+box-shadow:0 8px 25px rgba(45,55,45,.06)
+}
+.icon{font-size:34px}
+.card h3{
+font-size:21px;
+margin:12px 0
+}
+.card p{
+font-size:16px;
+line-height:1.6;
+color:#69716c
+}
+.products{
+background:#fffdf7
+}
+.product-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px
+}
+.product{
+background:white;
+border:1px solid #eadfca;
+border-radius:18px;
+padding:28px;
+text-align:center
+}
+.product.best{
+border:2px solid #e0a62a;
+transform:translateY(-6px)
+}
+.product h3{
+font-size:24px
+}
+.product-price{
+font-size:34px;
+font-weight:800;
+color:#d93625;
+margin:16px 0 6px
+}
+.product small{color:#747b76}
 
 .order{
-
-background-image:
-linear-gradient(
-rgba(23,100,59,.65),
-rgba(23,100,59,.65)
-),
-url("./images/vung-nguyen-lieu.jpg");
-
-background-size:cover;
-
-padding:70px 10%;
-
+background:#52765e;
+padding:70px 20px
 }
-
-
-
-.form{
-
-background:white;
-
-max-width:600px;
-
+.order-box{
+max-width:760px;
 margin:auto;
-
+background:white;
+border-radius:22px;
 padding:30px;
-
-border-radius:20px;
-
+box-shadow:0 18px 50px rgba(0,0,0,.15)
 }
-
-
-
-input,select{
-
-width:100%;
-
-padding:15px;
-
-margin:8px 0;
-
-border-radius:8px;
-
-border:1px solid #ddd;
-
+.order h2{
+text-align:center;
+color:#12633b;
+font-size:38px
 }
-
-
-
-.submit{
-
-width:100%;
-
-background:#d93625;
-
-color:white;
-
-padding:16px;
-
-border:0;
-
-font-size:18px;
-
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px
+}
+label{
 font-weight:bold;
-
-border-radius:10px;
-
+font-size:15px;
+display:block;
+margin-bottom:7px
 }
-
-
+input,select,textarea{
+width:100%;
+padding:14px 15px;
+border:1px solid #ddd6c8;
+border-radius:10px;
+font:inherit
+}
+.full{grid-column:1/-1}
+.submit{
+width:100%;
+margin-top:18px
+}
+.note{
+text-align:center;
+color:#777;
+font-size:13px
+}
+footer{
+padding:28px;
+text-align:center;
+background:#173f2b;
+color:white
+}
+.sticky{
+position:fixed;
+bottom:12px;
+left:50%;
+transform:translateX(-50%);
+z-index:20;
+width:min(520px,calc(100% - 24px));
+text-align:center
+}
 
 @media(max-width:800px){
-
-.hero{
-
-display:block;
-
+.hero-grid,
+.cards,
+.product-grid{
+grid-template-columns:1fr
 }
-
-
-.left,.right{
-
-width:100%;
-
+h1{font-size:43px}
+.lead{font-size:20px}
+.form-grid{grid-template-columns:1fr}
+.full{grid-column:auto}
+.product.best{transform:none}
 }
-
-
-h1{
-
-font-size:40px;
-
-}
-
-
-.cards{
-
-display:block;
-
-}
-
-}
-
 </style>
-
 </head>
-
 
 <body>
 
+<header class="hero">
+<div class="container hero-grid">
 
-<section class="hero">
-
-
-<div class="left">
-
-
-<div class="badge">
-ĐẶC SẢN NHO QUẾ - HÀ GIANG
-</div>
-
+<div>
+<span class="badge">ĐẶC SẢN NHO QUẾ • HÀ GIANG</span>
 
 <h1>
 ỚT GIÓ<br>
@@ -345,141 +236,222 @@ NGÂM DẤM<br>
 NHO QUẾ
 </h1>
 
-
-<div class="sub">
-Hương vị cay thơm đặc trưng của ớt gió vùng cao
+<div class="lead">
+Hương vị cay thơm đặc trưng của ớt gió vùng cao – tiện dùng trong bữa ăn.
 </div>
-
 
 <p class="desc">
-
-Ớt gió Hà Giang tuyển chọn từ vùng nguyên liệu,
-ngâm dấm truyền thống, tiện dụng trong từng bữa ăn.
-
+Ớt gió Hà Giang được tuyển chọn từ vùng nguyên liệu,
+ngâm dấm truyền thống, tiện dụng trong từng bữa ăn gia đình.
 </p>
 
-
 <div class="price">
-189.000đ / hộp 350ml
+189.000đ <span>/ hộp 350ml</span>
 </div>
 
-
-<button class="btn">
+<a class="btn" href="#dat-hang">
 ĐẶT HÀNG NGAY →
-</button>
-
-
+</a>
 </div>
 
-
-
-<div class="right">
-
-
-<img class="product"
-src="./images/san-pham-350ml.jpg">
-
-
-<br>
-
-
-<img class="chili"
-src="./images/ot-gio-tuoi.png">
-
-
+<div>
+<!-- ẢNH FARM -->
+<img
+class="hero-img"
+src="images/farm.png"
+alt="Vùng nguyên liệu ớt gió Nho Quế - Hà Giang">
 </div>
 
-
-</section>
-
-
+</div>
+</header>
 
 
-<section class="section">
+<section>
+<div class="container">
 
-<h2>
+<h2 class="section-title">
 Vì sao khách nên chọn sản phẩm này?
 </h2>
 
-
 <div class="cards">
 
-
 <div class="card">
-<h3>🌶 Ớt gió vùng cao</h3>
+<div class="icon">🌶️</div>
+<h3>Ớt gió vùng cao</h3>
 <p>
-Hương vị đặc trưng của vùng núi Hà Giang.
+Hương vị cay thơm đặc trưng của ớt gió Nho Quế.
 </p>
 </div>
 
-
 <div class="card">
-<h3>🏺 Lọ 350ml tiện dụng</h3>
+<div class="icon">🫙</div>
+<h3>Đóng lọ tiện dụng</h3>
 <p>
-Dễ dùng, bảo quản tốt trong gia đình.
+Dạng ngâm dấm, đóng lọ gọn gàng,
+thuận tiện sử dụng trong gia đình.
 </p>
 </div>
 
-
 <div class="card">
-<h3>🏆 Nguồn gốc rõ ràng</h3>
+<div class="icon">🏆</div>
+<h3>Đặc sản vùng cao</h3>
 <p>
-Có vùng nguyên liệu và cơ sở sản xuất.
+Hình ảnh vùng nguyên liệu được đưa trực tiếp lên trang
+để khách dễ hình dung nguồn gốc.
 </p>
 </div>
 
-
 </div>
-
+</div>
 </section>
 
 
+<section class="products">
 
-<section class="order">
+<div class="container">
 
-
-<h2 style="text-align:center;color:white">
-Đặt hàng ngay
+<h2 class="section-title">
+Chọn sản phẩm
 </h2>
 
+<div class="product-grid">
 
-<div class="form">
+<div class="product">
+<h3>1 hộp 350ml</h3>
+<div class="product-price">189.000đ</div>
+<small>Phù hợp dùng thử</small>
+<br><br>
+<a class="btn" href="#dat-hang">
+Chọn 1 hộp
+</a>
+</div>
 
-<input placeholder="Họ và tên">
 
-<input placeholder="Số điện thoại">
+<div class="product best">
+<h3>Combo 2 hộp</h3>
+<div class="product-price">349.000đ</div>
+<small>174.500đ / hộp</small>
+<br><br>
+<a class="btn" href="#dat-hang">
+Chọn Combo 2
+</a>
+</div>
 
-<input placeholder="Địa chỉ nhận hàng">
+
+<div class="product">
+<h3>Combo 3 hộp</h3>
+<div class="product-price">489.000đ</div>
+<small>163.000đ / hộp</small>
+<br><br>
+<a class="btn" href="#dat-hang">
+Chọn Combo 3
+</a>
+</div>
+
+</div>
+</div>
+</section>
 
 
-<select>
+<section class="order" id="dat-hang">
+
+<div class="order-box">
+
+<h2>Đặt hàng ngay</h2>
+
+<form onsubmit="submitOrder(event)">
+
+<div class="form-grid">
+
+<div>
+<label>Họ và tên</label>
+<input id="name" required placeholder="Nhập họ tên">
+</div>
+
+<div>
+<label>Số điện thoại</label>
+<input id="phone" required type="tel"
+placeholder="Nhập số điện thoại">
+</div>
+
+<div class="full">
+<label>Địa chỉ nhận hàng</label>
+<input id="address" required
+placeholder="Số nhà, thôn/xóm, xã, huyện, tỉnh">
+</div>
+
+<div>
+<label>Chọn sản phẩm</label>
+<select id="product">
 
 <option>
-1 hộp 350ml - 189.000đ
+1 hộp 350ml – 189.000đ
 </option>
 
 <option>
-Combo 2 hộp - 349.000đ
+Combo 2 hộp – 349.000đ
 </option>
 
 <option>
-Combo 3 hộp - 489.000đ
+Combo 3 hộp – 489.000đ
 </option>
 
 </select>
+</div>
 
-
-<button class="submit">
-GỬI THÔNG TIN ĐẶT HÀNG
-</button>
-
+<div>
+<label>Ghi chú</label>
+<input id="note"
+placeholder="Ví dụ: gọi trước khi giao">
+</div>
 
 </div>
 
+<button class="btn submit" type="submit">
+GỬI THÔNG TIN ĐẶT HÀNG
+</button>
 
+<p class="note">
+Form hiện là bản demo. Khi triển khai nhận đơn thật,
+chỉ cần nối form với nơi nhận đơn.
+</p>
+
+</form>
+
+</div>
 </section>
 
 
-</body>
+<footer>
+Ớt Gió Ngâm Dấm Nho Quế • Hà Giang
+</footer>
 
+
+<div class="sticky">
+<a class="btn" style="display:block" href="#dat-hang">
+🌶️ ĐẶT HÀNG – TỪ 189.000đ
+</a>
+</div>
+
+
+<script>
+function submitOrder(e){
+e.preventDefault();
+
+const name=document.getElementById('name').value;
+const phone=document.getElementById('phone').value;
+const address=document.getElementById('address').value;
+const product=document.getElementById('product').value;
+
+alert(
+"Đã nhận thông tin đặt hàng demo!\n\n"+
+"Họ tên: "+name+"\n"+
+"SĐT: "+phone+"\n"+
+"Địa chỉ: "+address+"\n"+
+"Sản phẩm: "+product
+);
+}
+</script>
+
+</body>
 </html>
