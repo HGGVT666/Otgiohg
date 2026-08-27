@@ -10,7 +10,7 @@
 
 *{
 box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -22,46 +22,68 @@ color:#333;
 
 .hero{
 
-min-height:650px;
-
-background:
-linear-gradient(
-rgba(255,250,240,0.88),
-rgba(255,250,240,0.92)
-),
-url("images/vung-nguyen-lieu.jpg");
-
-background-size:cover;
-background-position:center;
+min-height:700px;
 
 display:flex;
+
 align-items:center;
-padding:60px 8%;
+
+padding:70px 8%;
+
+background-image:
+linear-gradient(
+rgba(255,250,240,0.72),
+rgba(255,250,240,0.88)
+),
+url("./images/vung-nguyen-lieu.jpg");
+
+background-size:cover;
+
+background-position:center;
+
 }
 
 
-.content{
+.left{
 
-width:50%;
+width:55%;
+
+}
+
+
+.right{
+
+width:45%;
+
+text-align:center;
 
 }
 
 
 .badge{
 
-display:inline-block;
-padding:8px 16px;
-border-radius:30px;
 background:white;
+
 color:#17643b;
+
+padding:8px 18px;
+
+border-radius:30px;
+
 font-weight:bold;
+
+display:inline-block;
+
 }
+
 
 
 h1{
 
-font-size:55px;
-line-height:1.05;
+font-size:58px;
+
+line-height:1;
+
 color:#d93625;
 
 margin:25px 0;
@@ -69,27 +91,35 @@ margin:25px 0;
 }
 
 
-.subtitle{
+
+.sub{
 
 font-size:25px;
+
 font-weight:bold;
+
 color:#17643b;
 
 }
+
 
 
 .desc{
 
 font-size:18px;
+
 line-height:1.6;
 
 }
 
 
+
 .price{
 
-font-size:40px;
+font-size:42px;
+
 font-weight:bold;
+
 color:#d93625;
 
 margin:25px 0;
@@ -97,42 +127,46 @@ margin:25px 0;
 }
 
 
-button{
+
+.btn{
 
 background:#d93625;
+
 color:white;
 
-border:none;
-
 padding:18px 35px;
+
+border-radius:10px;
+
+border:0;
 
 font-size:18px;
 
 font-weight:bold;
 
-border-radius:8px;
-
-cursor:pointer;
-
 }
+
 
 
 .product{
 
-width:50%;
-text-align:center;
+width:90%;
+
+max-width:430px;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.25);
 
 }
 
 
-.product img{
 
-width:80%;
-max-width:420px;
+.chili{
 
-border-radius:20px;
+width:130px;
 
-box-shadow:0 20px 40px rgba(0,0,0,.2);
+margin-top:20px;
 
 }
 
@@ -141,18 +175,21 @@ box-shadow:0 20px 40px rgba(0,0,0,.2);
 .section{
 
 padding:60px 8%;
+
 text-align:center;
 
 }
 
 
-.section h2{
 
-font-size:35px;
+.section h2{
 
 color:#17643b;
 
+font-size:36px;
+
 }
+
 
 
 .cards{
@@ -161,9 +198,8 @@ display:flex;
 
 gap:25px;
 
-justify-content:center;
-
 }
+
 
 
 .card{
@@ -174,37 +210,83 @@ padding:30px;
 
 border-radius:15px;
 
-width:30%;
+flex:1;
 
 box-shadow:0 5px 20px #ddd;
 
 }
 
 
-.card h3{
 
-color:#17643b;
+.order{
+
+background-image:
+linear-gradient(
+rgba(23,100,59,.65),
+rgba(23,100,59,.65)
+),
+url("./images/vung-nguyen-lieu.jpg");
+
+background-size:cover;
+
+padding:70px 10%;
 
 }
 
 
-.bottom{
 
-position:fixed;
-
-bottom:0;
-
-left:0;
-
-right:0;
+.form{
 
 background:white;
 
-padding:12px;
+max-width:600px;
 
-text-align:center;
+margin:auto;
+
+padding:30px;
+
+border-radius:20px;
 
 }
+
+
+
+input,select{
+
+width:100%;
+
+padding:15px;
+
+margin:8px 0;
+
+border-radius:8px;
+
+border:1px solid #ddd;
+
+}
+
+
+
+.submit{
+
+width:100%;
+
+background:#d93625;
+
+color:white;
+
+padding:16px;
+
+border:0;
+
+font-size:18px;
+
+font-weight:bold;
+
+border-radius:10px;
+
+}
+
 
 
 @media(max-width:800px){
@@ -215,8 +297,8 @@ display:block;
 
 }
 
-.content,
-.product{
+
+.left,.right{
 
 width:100%;
 
@@ -236,16 +318,7 @@ display:block;
 
 }
 
-
-.card{
-
-width:100%;
-margin:15px 0;
-
 }
-
-}
-
 
 </style>
 
@@ -258,7 +331,7 @@ margin:15px 0;
 <section class="hero">
 
 
-<div class="content">
+<div class="left">
 
 
 <div class="badge">
@@ -273,25 +346,25 @@ NHO QUẾ
 </h1>
 
 
-<div class="subtitle">
+<div class="sub">
 Hương vị cay thơm đặc trưng của ớt gió vùng cao
 </div>
 
 
 <p class="desc">
 
-Sản phẩm ớt gió Hà Giang được tuyển chọn từ vùng nguyên liệu,
-ngâm dấm truyền thống, tiện dụng trong mỗi bữa ăn gia đình.
+Ớt gió Hà Giang tuyển chọn từ vùng nguyên liệu,
+ngâm dấm truyền thống, tiện dụng trong từng bữa ăn.
 
 </p>
 
 
 <div class="price">
-189.000đ
+189.000đ / hộp 350ml
 </div>
 
 
-<button>
+<button class="btn">
 ĐẶT HÀNG NGAY →
 </button>
 
@@ -300,15 +373,19 @@ ngâm dấm truyền thống, tiện dụng trong mỗi bữa ăn gia đình.
 
 
 
-<div class="product">
+<div class="right">
 
-<img src="images/san-pham-350ml.jpg">
 
-<br><br>
+<img class="product"
+src="./images/san-pham-350ml.jpg">
 
-<img 
-src="images/ot-gio-tuoi.png"
-style="width:120px;box-shadow:none;">
+
+<br>
+
+
+<img class="chili"
+src="./images/ot-gio-tuoi.png">
+
 
 </div>
 
@@ -329,59 +406,78 @@ Vì sao khách nên chọn sản phẩm này?
 
 
 <div class="card">
-
-<h3>
-🌶 Ớt gió vùng cao
-</h3>
-
+<h3>🌶 Ớt gió vùng cao</h3>
 <p>
-Hương vị cay thơm đặc trưng của vùng núi Hà Giang.
+Hương vị đặc trưng của vùng núi Hà Giang.
 </p>
-
 </div>
-
 
 
 <div class="card">
-
-<h3>
-🏺 Đóng lọ tiện dụng
-</h3>
-
+<h3>🏺 Lọ 350ml tiện dụng</h3>
 <p>
-Lọ 350ml nhỏ gọn, dễ bảo quản và sử dụng.
+Dễ dùng, bảo quản tốt trong gia đình.
 </p>
-
 </div>
-
 
 
 <div class="card">
-
-<h3>
-🏆 Sản phẩm đặc sản
-</h3>
-
+<h3>🏆 Nguồn gốc rõ ràng</h3>
 <p>
-Nguồn gốc rõ ràng, phù hợp làm quà tặng.
+Có vùng nguyên liệu và cơ sở sản xuất.
 </p>
+</div>
+
 
 </div>
+
+</section>
+
+
+
+<section class="order">
+
+
+<h2 style="text-align:center;color:white">
+Đặt hàng ngay
+</h2>
+
+
+<div class="form">
+
+<input placeholder="Họ và tên">
+
+<input placeholder="Số điện thoại">
+
+<input placeholder="Địa chỉ nhận hàng">
+
+
+<select>
+
+<option>
+1 hộp 350ml - 189.000đ
+</option>
+
+<option>
+Combo 2 hộp - 349.000đ
+</option>
+
+<option>
+Combo 3 hộp - 489.000đ
+</option>
+
+</select>
+
+
+<button class="submit">
+GỬI THÔNG TIN ĐẶT HÀNG
+</button>
 
 
 </div>
 
 
 </section>
-
-
-<div class="bottom">
-
-<button>
-🌶 ĐẶT HÀNG - 189.000đ
-</button>
-
-</div>
 
 
 </body>
