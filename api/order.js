@@ -6,9 +6,9 @@ export default async function handler(req, res) {
     const apiKey = process.env.PANCAKE_API_KEY;
     const shopId = process.env.PANCAKE_SHOP_ID;
     if (!apiKey || !shopId) return res.status(500).json({ success: false, error: "Thiếu cấu hình Pancake" });
-    let cleanPhone = String(phone).replace(/\\s+/g, "").replace(/[().-]/g, "");
+    let cleanPhone = String(phone).replace(/\s+/g, "").replace(/[().-]/g, "");
     if (cleanPhone.startsWith("+84")) cleanPhone = "0" + cleanPhone.slice(3);
-    if (!/^0\\d{9}$/.test(cleanPhone)) return res.status(400).json({ success: false, error: "Số điện thoại không đúng định dạng" });
+    if (!/^0\d{9}$/.test(cleanPhone)) return res.status(400).json({ success: false, error: "Số điện thoại không đúng định dạng" });
 
     const baseUrl = "https://pos.pages.fm/api/v1/shops/" + encodeURIComponent(shopId);
     const request = async (path) => {
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       return data;
     };
     const list = (value) => Array.isArray(value) ? value : Array.isArray(value?.data) ? value.data : Array.isArray(value?.warehouses) ? value.warehouses : [];
-    const normalise = (value) => String(value || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase();
+    const normalise = (value) => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
     const warehouseData = await request("/warehouses");
     const warehouse = list(warehouseData).find((item) => normalise(item.code || item.warehouse_code) === "nhatanh01" || normalise(item.name || item.warehouse_name).includes("nhat anh"));
