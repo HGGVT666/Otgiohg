@@ -18,6 +18,7 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backd
 footer{background:#06482f;color:#fff;text-align:center;padding:30px 0 85px}footer h3{font-size:16px}footer p{font-size:12px;color:rgba(255,255,255,.7)}.float{position:fixed;right:20px;bottom:20px;z-index:1200;background:var(--r);color:#fff;padding:13px 20px;border-radius:99px;font-weight:900;box-shadow:0 8px 25px rgba(0,0,0,.25)}.modal{display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.86);align-items:center;justify-content:center;padding:20px}.modal.on{display:flex}.modal img{max-width:95vw;max-height:90vh;object-fit:contain;border-radius:8px;background:#fff}.close{position:fixed;top:12px;right:20px;color:#fff;font-size:38px;cursor:pointer;background:none;border:0}
 @media(max-width:900px){nav a:not(.cta){display:none}.hg,.split{grid-template-columns:1fr}.hg{text-align:center;padding:60px 0}.desc{margin-inline:auto}.actions{justify-content:center}.heroimg img{width:min(370px,85vw)}.cards,.certs{grid-template-columns:1fr 1fr}.photo img{height:320px}}
 @media(max-width:620px){.wrap{width:calc(100% - 24px)}.sec{padding:55px 0}.logo{font-size:15px}.hi{min-height:62px}nav .cta{padding:9px 12px;font-size:11px}.hero h1{font-size:42px}.sub{font-size:17px}.desc{font-size:14px}.tg,.cards,.certs{grid-template-columns:1fr}.ti{border-right:0;border-bottom:1px solid var(--l)}.ti:last-child{border-bottom:0}.pimg{height:320px}.fg{grid-template-columns:1fr;gap:0}.float{left:12px;right:12px;bottom:12px;text-align:center}.photo img{height:280px}form{padding:20px 16px}}
+.submit:disabled{opacity:.65;cursor:wait;}
 </style>
 </head>
 <body>
@@ -52,6 +53,46 @@ function selectProduct(v){document.getElementById('product').value=v;document.ge
 function openCert(src){document.getElementById('modalImg').src=src;document.getElementById('modal').classList.add('on');document.body.style.overflow='hidden'}
 function closeCert(){document.getElementById('modal').classList.remove('on');document.body.style.overflow=''}
 document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')closeCert()};document.onkeydown=e=>{if(e.key==='Escape')closeCert()}
-function submitOrder(e){e.preventDefault();const n=document.getElementById('name').value.trim(),p=document.getElementById('phone').value.trim(),a=document.getElementById('address').value.trim(),pr=document.getElementById('product').value,no=document.getElementById('note').value.trim();const msg=`ĐẶT HÀNG ỚT GIÓ NGÂM DẤM NHO QUẾ\n\nHọ tên: ${n}\nSĐT: ${p}\nĐịa chỉ: ${a}\nSản phẩm: ${pr}\nGhi chú: ${no||'Không có'}`;navigator.clipboard?.writeText(msg).catch(()=>{});alert('Đã nhận thông tin đặt hàng!\n\nSản phẩm: '+pr+'\n\nNội dung đơn hàng đã được chuẩn bị để xác nhận.');console.log(msg)}
+async function submitOrder(e){
+  e.preventDefault();
+  const form=e.target, btn=form.querySelector('button[type="submit"]');
+  const order={
+    name:document.getElementById('name').value.trim(),
+    phone:document.getElementById('phone').value.trim(),
+    address:document.getElementById('address').value.trim(),
+    product:document.getElementById('product').value,
+    note:document.getElementById('note').value.trim(),
+    source:'landing-page-ot-gio',
+    created_at:new Date().toISOString()
+  };
+
+  if(!order.name||!order.phone||!order.address||!order.product){
+    alert('Vui lòng nhập đầy đủ thông tin đặt hàng.');
+    return;
+  }
+
+  const ORDER_ENDPOINT='https://YOUR-WORKER-DOMAIN.workers.dev/api/orders';
+  btn.disabled=true;
+  btn.textContent='ĐANG GỬI ĐƠN...';
+
+  try{
+    const r=await fetch(ORDER_ENDPOINT,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(order)
+    });
+    const result=await r.json().catch(()=>({}));
+    if(!r.ok||result.success!==true) throw new Error(result.message||'Không gửi được đơn');
+
+    alert('ĐẶT HÀNG THÀNH CÔNG!\\n\\nSản phẩm: '+order.product+'\\n\\nĐơn đã được gửi vào Pancake.');
+    form.reset();
+  }catch(err){
+    console.error(err);
+    alert('CHƯA GỬI ĐƯỢC ĐƠN\\n\\nAnh/chị vui lòng thử lại sau ít phút.');
+  }finally{
+    btn.disabled=false;
+    btn.textContent='GỬI THÔNG TIN ĐẶT HÀNG';
+  }
+}
 </script>
 </body></html>
