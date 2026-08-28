@@ -9,846 +9,838 @@
 <meta name="description" content="Ớt gió ngâm dấm Nho Quế – hương vị cay thơm đặc trưng của ớt gió vùng cao Hà Giang. Hộp 350ml.">
 
 <style>
+
 :root{
-  --red:#d93625;
-  --red2:#b92b1e;
-  --green:#155f3b;
-  --cream:#fffaf0;
-  --text:#252525;
-  --muted:#68716b;
+    --red:#d93625;
+    --red2:#b92b1e;
+    --green:#155f3b;
+    --cream:#fffaf0;
+    --text:#252525;
+    --muted:#68716b;
 }
 
 *{
-  box-sizing:border-box;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--text);
-  line-height:1.6;
-  background:var(--cream);
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text);
+    line-height:1.6;
+    background:var(--cream);
 }
 
 a{
-  text-decoration:none;
+    text-decoration:none;
 }
 
 .container{
-  width:min(1120px,92%);
-  margin:auto;
+    width:min(1120px,92%);
+    margin:auto;
 }
 
-/* =========================
-   HERO
-========================= */
+
+/* ================= HERO ================= */
 
 .hero{
-  position:relative;
-  overflow:hidden;
-  min-height:680px;
+    position:relative;
+    overflow:hidden;
+    min-height:680px;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,250,240,.97) 0%,
-      rgba(255,250,240,.90) 43%,
-      rgba(255,250,240,.48) 100%
-    ),
-    url("./images/farm.png") center/cover no-repeat;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,250,240,.97) 0%,
+            rgba(255,250,240,.90) 43%,
+            rgba(255,250,240,.48) 100%
+        ),
+        url("./images/farm.png") center center / cover no-repeat;
 }
 
 .hero-inner{
-  min-height:680px;
-  display:grid;
-  grid-template-columns:1.08fr .92fr;
-  align-items:center;
-  gap:45px;
-  padding:70px 0 90px;
+    min-height:680px;
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    align-items:center;
+    gap:45px;
+    padding:70px 0 90px;
 }
 
 .badge{
-  display:inline-block;
-  padding:7px 15px;
-  border:1px solid #e7dfcf;
-  border-radius:999px;
-  background:#fff;
-  color:var(--green);
-  font-weight:800;
-  font-size:14px;
+    display:inline-block;
+    padding:7px 15px;
+    border:1px solid #e7dfcf;
+    border-radius:999px;
+    background:#fff;
+    color:var(--green);
+    font-weight:800;
+    font-size:14px;
 }
 
 h1{
-  margin:18px 0 12px;
-  color:var(--red);
-  font-size:clamp(46px,6vw,76px);
-  line-height:.98;
-  letter-spacing:-2px;
+    margin:18px 0 12px;
+    color:var(--red);
+    font-size:clamp(46px,6vw,76px);
+    line-height:.98;
+    letter-spacing:-2px;
 }
 
 .hero h2{
-  margin:0 0 15px;
-  color:var(--green);
-  font-size:clamp(22px,2.5vw,31px);
-  line-height:1.25;
+    margin:0 0 15px;
+    color:var(--green);
+    font-size:clamp(22px,2.5vw,31px);
+    line-height:1.25;
 }
 
 .hero p{
-  max-width:650px;
-  margin:0 0 22px;
-  font-size:18px;
-  color:#4f554f;
+    max-width:650px;
+    margin:0 0 22px;
+    font-size:18px;
+    color:#4f554f;
 }
 
 .price{
-  color:var(--red);
-  font-weight:900;
-  font-size:40px;
-  margin:15px 0 18px;
+    color:var(--red);
+    font-weight:900;
+    font-size:40px;
+    margin:15px 0 18px;
 }
 
 .price span{
-  font-size:17px;
-  color:var(--muted);
-  font-weight:600;
+    font-size:17px;
+    color:var(--muted);
+    font-weight:600;
 }
 
 .cta{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--red);
-  color:#fff;
-  padding:16px 27px;
-  border-radius:12px;
-  font-size:17px;
-  font-weight:900;
-  box-shadow:0 12px 24px rgba(217,54,37,.22);
-  transition:.2s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--red);
+    color:#fff;
+    padding:16px 27px;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:900;
+    box-shadow:0 12px 24px rgba(217,54,37,.22);
+    transition:.2s;
 }
 
 .cta:hover{
-  background:var(--red2);
-  transform:translateY(-2px);
+    background:var(--red2);
+    transform:translateY(-2px);
 }
 
 .product-wrap{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .product-image{
-  width:min(430px,100%);
-  max-height:500px;
-  object-fit:contain;
-  filter:drop-shadow(0 24px 25px rgba(0,0,0,.17));
+    width:min(430px,100%);
+    max-height:500px;
+    object-fit:contain;
+    filter:drop-shadow(0 24px 25px rgba(0,0,0,.17));
 }
 
-/* =========================
-   SECTION
-========================= */
+
+/* ================= SECTION ================= */
 
 .section{
-  padding:75px 0;
+    padding:75px 0;
 }
 
 .section-title{
-  text-align:center;
-  color:var(--green);
-  font-size:clamp(30px,4vw,42px);
-  line-height:1.15;
-  margin:0 0 40px;
+    text-align:center;
+    color:var(--green);
+    font-size:clamp(30px,4vw,42px);
+    line-height:1.15;
+    margin:0 0 40px;
 }
 
-/* =========================
-   FEATURES
-========================= */
+
+/* ================= FEATURES ================= */
 
 .features,
 .product-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
 .card{
-  background:#fff;
-  border:1px solid #e8e7df;
-  border-radius:18px;
-  padding:28px;
-  box-shadow:0 8px 28px rgba(0,0,0,.045);
+    background:#fff;
+    border:1px solid #e8e7df;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 8px 28px rgba(0,0,0,.045);
 }
 
 .icon{
-  font-size:32px;
+    font-size:32px;
 }
 
 .card h3{
-  margin:5px 0 8px;
-  font-size:21px;
+    margin:5px 0 8px;
+    font-size:21px;
 }
 
 .card p{
-  margin:0;
-  color:var(--muted);
+    margin:0;
+    color:var(--muted);
 }
 
-/* =========================
-   PRODUCTS
-========================= */
+
+/* ================= PRODUCTS ================= */
 
 .products-section{
-  background:#fffdf7;
+    background:#fffdf7;
 }
 
 .product-card{
-  background:#fff;
-  border:1px solid #e8e2d5;
-  border-radius:20px;
-  padding:30px 22px;
-  text-align:center;
-  position:relative;
+    background:#fff;
+    border:1px solid #e8e2d5;
+    border-radius:20px;
+    padding:30px 22px;
+    text-align:center;
+    position:relative;
 }
 
 .product-card.featured{
-  border:2px solid #e4a72e;
-  transform:translateY(-6px);
+    border:2px solid #e4a72e;
+    transform:translateY(-6px);
 }
 
 .tag{
-  position:absolute;
-  top:-13px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#e4a72e;
-  color:#fff;
-  padding:5px 13px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:900;
-  white-space:nowrap;
+    position:absolute;
+    top:-13px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#e4a72e;
+    color:#fff;
+    padding:5px 13px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:900;
+    white-space:nowrap;
 }
 
 .product-card h3{
-  margin:5px 0;
-  font-size:23px;
+    margin:5px 0;
+    font-size:23px;
 }
 
 .big-price{
-  color:var(--red);
-  font-size:34px;
-  font-weight:900;
-  margin:8px 0;
+    color:var(--red);
+    font-size:34px;
+    font-weight:900;
+    margin:8px 0;
 }
 
 .product-card small{
-  display:block;
-  color:#7b837c;
-  margin-bottom:18px;
+    display:block;
+    color:#7b837c;
+    margin-bottom:18px;
 }
 
 .product-card .cta{
-  font-size:15px;
-  padding:13px 20px;
+    font-size:15px;
+    padding:13px 20px;
 }
 
-/* =========================
-   STORY
-========================= */
+
+/* ================= STORY ================= */
 
 .story{
-  background:var(--green);
-  color:#fff;
+    background:var(--green);
+    color:#fff;
 }
 
 .story-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:45px;
-  align-items:center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
 }
 
 .story h2{
-  font-size:40px;
-  line-height:1.15;
-  margin:0 0 15px;
+    font-size:40px;
+    line-height:1.15;
+    margin:0 0 15px;
 }
 
 .story p{
-  color:#e6f0e9;
-  font-size:17px;
+    color:#e6f0e9;
+    font-size:17px;
 }
 
 .story-image{
-  border-radius:22px;
-  width:100%;
-  max-height:430px;
-  object-fit:cover;
-  box-shadow:0 20px 45px rgba(0,0,0,.2);
+    border-radius:22px;
+    width:100%;
+    max-height:430px;
+    object-fit:cover;
+    box-shadow:0 20px 45px rgba(0,0,0,.2);
 }
 
-/* =========================
-   ORDER
-========================= */
+
+/* ================= ORDER ================= */
 
 .order-section{
-  background:
-    linear-gradient(
-      rgba(21,95,59,.78),
-      rgba(21,95,59,.78)
-    ),
-    url("./images/farm.png") center/cover no-repeat;
+    background:
+        linear-gradient(
+            rgba(21,95,59,.78),
+            rgba(21,95,59,.78)
+        ),
+        url("./images/farm.png") center center / cover no-repeat;
 }
 
 .order-title{
-  color:#fff;
+    color:#fff;
 }
 
 .form{
-  width:min(700px,100%);
-  margin:auto;
-  background:#fff;
-  border-radius:22px;
-  padding:28px;
-  box-shadow:0 16px 45px rgba(46,65,49,.12);
+    width:min(700px,100%);
+    margin:auto;
+    background:#fff;
+    border-radius:22px;
+    padding:28px;
+    box-shadow:0 16px 45px rgba(46,65,49,.12);
 }
 
 .form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
 }
 
 .field{
-  margin-bottom:15px;
+    margin-bottom:15px;
 }
 
 .field label{
-  display:block;
-  font-weight:800;
-  margin-bottom:6px;
+    display:block;
+    font-weight:800;
+    margin-bottom:6px;
 }
 
 .field input,
 .field select{
-  width:100%;
-  border:1px solid #dfe2dc;
-  border-radius:11px;
-  padding:13px 14px;
-  font-size:16px;
-  font-family:inherit;
-  background:#fff;
+    width:100%;
+    border:1px solid #dfe2dc;
+    border-radius:11px;
+    padding:13px 14px;
+    font-size:16px;
+    font-family:inherit;
+    background:#fff;
 }
 
 .full{
-  grid-column:1/-1;
+    grid-column:1/-1;
 }
 
 .submit{
-  width:100%;
-  border:0;
-  cursor:pointer;
-  background:var(--red);
-  color:#fff;
-  padding:16px;
-  border-radius:11px;
-  font-size:17px;
-  font-weight:900;
+    width:100%;
+    border:0;
+    cursor:pointer;
+    background:var(--red);
+    color:#fff;
+    padding:16px;
+    border-radius:11px;
+    font-size:17px;
+    font-weight:900;
 }
 
 .note{
-  text-align:center;
-  color:#747b76;
-  font-size:13px;
-  margin:10px 0 0;
+    text-align:center;
+    color:#747b76;
+    font-size:13px;
+    margin:10px 0 0;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
+/* ================= FOOTER ================= */
 
 footer{
-  background:#10482d;
-  color:#dcebe1;
-  text-align:center;
-  padding:28px 15px;
+    background:#10482d;
+    color:#dcebe1;
+    text-align:center;
+    padding:28px 15px;
 }
 
 footer strong{
-  color:#fff;
+    color:#fff;
 }
 
-/* =========================
-   STICKY BUTTON
-========================= */
+
+/* ================= STICKY BUTTON ================= */
 
 .sticky{
-  position:fixed;
-  z-index:20;
-  left:50%;
-  bottom:12px;
-  transform:translateX(-50%);
-  width:min(485px,calc(100% - 28px));
-  background:var(--red);
-  color:#fff;
-  text-align:center;
-  padding:15px 20px;
-  border-radius:13px;
-  font-weight:900;
-  box-shadow:0 10px 30px rgba(0,0,0,.2);
+    position:fixed;
+    z-index:20;
+    left:50%;
+    bottom:12px;
+    transform:translateX(-50%);
+    width:min(485px,calc(100% - 28px));
+    background:var(--red);
+    color:#fff;
+    text-align:center;
+    padding:15px 20px;
+    border-radius:13px;
+    font-weight:900;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-/* =========================
-   MOBILE
-========================= */
+
+/* ================= MOBILE ================= */
 
 @media(max-width:800px){
 
-  .hero-inner,
-  .story-grid{
-    grid-template-columns:1fr;
-  }
+    .hero-inner,
+    .story-grid{
+        grid-template-columns:1fr;
+    }
 
-  .hero-inner{
-    min-height:auto;
-    padding:55px 0 75px;
-  }
+    .hero-inner{
+        min-height:auto;
+        padding:55px 0 75px;
+    }
 
-  .product-wrap{
-    order:-1;
-  }
+    .product-wrap{
+        order:-1;
+    }
 
-  .product-image{
-    width:min(310px,85vw);
-    max-height:350px;
-  }
+    .product-image{
+        width:min(310px,85vw);
+        max-height:350px;
+    }
 
-  .features,
-  .product-grid{
-    grid-template-columns:1fr;
-  }
+    .features,
+    .product-grid{
+        grid-template-columns:1fr;
+    }
 
-  .product-card.featured{
-    transform:none;
-  }
+    .product-card.featured{
+        transform:none;
+    }
 
-  .form-grid{
-    grid-template-columns:1fr;
-  }
+    .form-grid{
+        grid-template-columns:1fr;
+    }
 
-  .full{
-    grid-column:auto;
-  }
+    .full{
+        grid-column:auto;
+    }
 
-  h1{
-    font-size:50px;
-  }
+    h1{
+        font-size:50px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- =========================
-     HERO
-========================= -->
+
+<!-- ================= HERO ================= -->
 
 <header class="hero">
 
-  <div class="container hero-inner">
+<div class="container hero-inner">
 
-    <div>
+<div>
 
-      <span class="badge">
-        ĐẶC SẢN NHO QUẾ · HÀ GIANG
-      </span>
+<span class="badge">
+ĐẶC SẢN NHO QUẾ · HÀ GIANG
+</span>
 
-      <h1>
-        ỚT GIÓ<br>
-        NGÂM DẤM<br>
-        NHO QUẾ
-      </h1>
+<h1>
+ỚT GIÓ<br>
+NGÂM DẤM<br>
+NHO QUẾ
+</h1>
 
-      <h2>
-        Hương vị cay thơm đặc trưng của ớt gió vùng cao
-      </h2>
+<h2>
+Hương vị cay thơm đặc trưng của ớt gió vùng cao
+</h2>
 
-      <p>
-        Sản phẩm ớt gió Hà Giang được tuyển chọn từ vùng nguyên liệu,
-        ngâm dấm truyền thống, tiện dụng trong mỗi bữa ăn gia đình.
-      </p>
+<p>
+Sản phẩm ớt gió Hà Giang được tuyển chọn từ vùng nguyên liệu,
+ngâm dấm truyền thống, tiện dụng trong mỗi bữa ăn gia đình.
+</p>
 
-      <div class="price">
-        189.000đ
-        <span>/ hộp 350ml</span>
-      </div>
+<div class="price">
+189.000đ <span>/ hộp 350ml</span>
+</div>
 
-      <a class="cta" href="#dat-hang">
-        ĐẶT HÀNG NGAY →
-      </a>
+<a class="cta" href="#dat-hang">
+ĐẶT HÀNG NGAY →
+</a>
 
-    </div>
+</div>
 
-    <div class="product-wrap">
 
-      <img
-        class="product-image"
-        src="./images/san-pham-350ml.jpg"
-        alt="Ớt gió ngâm dấm Nho Quế 350ml"
-      >
+<div class="product-wrap">
 
-    </div>
+<img
+class="product-image"
+src="./images/san-pham-350ml.jpg"
+alt="Ớt gió ngâm dấm Nho Quế 350ml"
+>
 
-  </div>
+</div>
+
+</div>
 
 </header>
 
 
-<!-- =========================
-     FEATURES
-========================= -->
+<!-- ================= FEATURES ================= -->
 
 <section class="section">
 
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title">
-      Vì sao khách nên chọn sản phẩm này?
-    </h2>
+<h2 class="section-title">
+Vì sao khách nên chọn sản phẩm này?
+</h2>
 
-    <div class="features">
+<div class="features">
 
-      <article class="card">
+<article class="card">
 
-        <div class="icon">🌶️</div>
+<div class="icon">🌶️</div>
 
-        <h3>
-          Ớt gió vùng cao
-        </h3>
+<h3>
+Ớt gió vùng cao
+</h3>
 
-        <p>
-          Tập trung vào hương vị đặc trưng của ớt gió Nho Quế,
-          cay thơm và nổi bật trong bữa ăn.
-        </p>
+<p>
+Tập trung vào hương vị đặc trưng của ớt gió Nho Quế,
+cay thơm và nổi bật trong bữa ăn.
+</p>
 
-      </article>
-
-
-      <article class="card">
-
-        <div class="icon">🫙</div>
-
-        <h3>
-          Đóng lọ tiện dụng
-        </h3>
-
-        <p>
-          Dạng ngâm dấm, đóng lọ gọn gàng,
-          thuận tiện sử dụng và bảo quản trong gia đình.
-        </p>
-
-      </article>
+</article>
 
 
-      <article class="card">
+<article class="card">
 
-        <div class="icon">🏆</div>
+<div class="icon">🫙</div>
 
-        <h3>
-          OCOP 4 sao
-        </h3>
+<h3>
+Đóng lọ tiện dụng
+</h3>
 
-        <p>
-          Hình ảnh chứng nhận OCOP có thể đưa trực tiếp lên trang
-          để tăng độ tin cậy với khách hàng.
-        </p>
+<p>
+Dạng ngâm dấm, đóng lọ gọn gàng,
+thuận tiện sử dụng và bảo quản trong gia đình.
+</p>
 
-      </article>
+</article>
 
-    </div>
 
-  </div>
+<article class="card">
+
+<div class="icon">🏆</div>
+
+<h3>
+OCOP 4 sao
+</h3>
+
+<p>
+Hình ảnh chứng nhận OCOP có thể đưa trực tiếp lên trang
+để tăng độ tin cậy với khách hàng.
+</p>
+
+</article>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     PRODUCTS
-========================= -->
+<!-- ================= PRODUCTS ================= -->
 
 <section class="section products-section" id="san-pham">
 
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title">
-      Chọn sản phẩm
-    </h2>
+<h2 class="section-title">
+Chọn sản phẩm
+</h2>
 
-    <div class="product-grid">
-
-      <article class="product-card">
-
-        <h3>
-          1 hộp 350ml
-        </h3>
-
-        <div class="big-price">
-          189.000đ
-        </div>
-
-        <small>
-          Phù hợp dùng thử
-        </small>
-
-        <a class="cta" href="#dat-hang">
-          Chọn 1 hộp
-        </a>
-
-      </article>
+<div class="product-grid">
 
 
-      <article class="product-card featured">
+<article class="product-card">
 
-        <div class="tag">
-          ĐƯỢC CHỌN NHIỀU
-        </div>
+<h3>
+1 hộp 350ml
+</h3>
 
-        <h3>
-          Combo 2 hộp
-        </h3>
+<div class="big-price">
+189.000đ
+</div>
 
-        <div class="big-price">
-          349.000đ
-        </div>
+<small>
+Phù hợp dùng thử
+</small>
 
-        <small>
-          174.500đ / hộp
-        </small>
+<a class="cta" href="#dat-hang">
+Chọn 1 hộp
+</a>
 
-        <a class="cta" href="#dat-hang">
-          Chọn Combo 2
-        </a>
-
-      </article>
+</article>
 
 
-      <article class="product-card">
+<article class="product-card featured">
 
-        <h3>
-          Combo 3 hộp
-        </h3>
+<div class="tag">
+ĐƯỢC CHỌN NHIỀU
+</div>
 
-        <div class="big-price">
-          489.000đ
-        </div>
+<h3>
+Combo 2 hộp
+</h3>
 
-        <small>
-          163.000đ / hộp
-        </small>
+<div class="big-price">
+349.000đ
+</div>
 
-        <a class="cta" href="#dat-hang">
-          Chọn Combo 3
-        </a>
+<small>
+174.500đ / hộp
+</small>
 
-      </article>
+<a class="cta" href="#dat-hang">
+Chọn Combo 2
+</a>
 
-    </div>
+</article>
 
-  </div>
+
+<article class="product-card">
+
+<h3>
+Combo 3 hộp
+</h3>
+
+<div class="big-price">
+489.000đ
+</div>
+
+<small>
+163.000đ / hộp
+</small>
+
+<a class="cta" href="#dat-hang">
+Chọn Combo 3
+</a>
+
+</article>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     STORY
-========================= -->
+<!-- ================= STORY ================= -->
 
 <section class="section story">
 
-  <div class="container story-grid">
-
-    <div>
-
-      <h2>
-        Từ vùng cao Hà Giang đến bữa cơm gia đình
-      </h2>
-
-      <p>
-        Ớt gió là nguyên liệu tạo nên điểm nhấn cay thơm rất riêng.
-        Sản phẩm được giới thiệu theo hướng rõ nguồn gốc,
-        hình ảnh thực tế và thông tin dễ kiểm tra.
-      </p>
-
-      <p>
-        <strong>
-          Ưu tiên sự thật của sản phẩm – không phóng đại công dụng.
-        </strong>
-      </p>
-
-    </div>
+<div class="container story-grid">
 
 
-    <div>
+<div>
 
-      <img
-        class="story-image"
-        src="./images/farm.png"
-        alt="Vùng nguyên liệu ớt gió Hà Giang"
-      >
+<h2>
+Từ vùng cao Hà Giang đến bữa cơm gia đình
+</h2>
 
-    </div>
+<p>
+Ớt gió là nguyên liệu tạo nên điểm nhấn cay thơm rất riêng.
+Sản phẩm được giới thiệu theo hướng rõ nguồn gốc,
+hình ảnh thực tế và thông tin dễ kiểm tra.
+</p>
 
-  </div>
+<p>
+<strong>
+Ưu tiên sự thật của sản phẩm – không phóng đại công dụng.
+</strong>
+</p>
+
+</div>
+
+
+<div>
+
+<img
+class="story-image"
+src="./images/farm.png"
+alt="Vùng nguyên liệu ớt gió Hà Giang"
+>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     ORDER
-========================= -->
+<!-- ================= ORDER ================= -->
 
 <section class="section order-section" id="dat-hang">
 
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title order-title">
-      Đặt hàng ngay
-    </h2>
-
-    <form class="form" onsubmit="submitOrder(event)">
-
-      <div class="form-grid">
-
-        <div class="field">
-
-          <label for="name">
-            Họ và tên
-          </label>
-
-          <input
-            id="name"
-            required
-            placeholder="Nhập họ tên"
-          >
-
-        </div>
+<h2 class="section-title order-title">
+Đặt hàng ngay
+</h2>
 
 
-        <div class="field">
+<form class="form" onsubmit="submitOrder(event)">
 
-          <label for="phone">
-            Số điện thoại
-          </label>
-
-          <input
-            id="phone"
-            required
-            inputmode="tel"
-            placeholder="Nhập số điện thoại"
-          >
-
-        </div>
+<div class="form-grid">
 
 
-        <div class="field full">
+<div class="field">
 
-          <label for="address">
-            Địa chỉ nhận hàng
-          </label>
+<label for="name">
+Họ và tên
+</label>
 
-          <input
-            id="address"
-            required
-            placeholder="Số nhà, thôn/xóm, xã, huyện, tỉnh"
-          >
+<input
+id="name"
+required
+placeholder="Nhập họ tên"
+>
 
-        </div>
-
-
-        <div class="field">
-
-          <label for="product">
-            Chọn sản phẩm
-          </label>
-
-          <select id="product">
-
-            <option>
-              1 hộp 350ml – 189.000đ
-            </option>
-
-            <option>
-              Combo 2 hộp – 349.000đ
-            </option>
-
-            <option>
-              Combo 3 hộp – 489.000đ
-            </option>
-
-          </select>
-
-        </div>
+</div>
 
 
-        <div class="field">
+<div class="field">
 
-          <label for="note">
-            Ghi chú
-          </label>
+<label for="phone">
+Số điện thoại
+</label>
 
-          <input
-            id="note"
-            placeholder="Ví dụ: gọi trước khi giao"
-          >
+<input
+id="phone"
+required
+inputmode="tel"
+placeholder="Nhập số điện thoại"
+>
 
-        </div>
+</div>
 
 
-        <div class="full">
+<div class="field full">
 
-          <button class="submit" type="submit">
-            GỬI THÔNG TIN ĐẶT HÀNG
-          </button>
+<label for="address">
+Địa chỉ nhận hàng
+</label>
 
-        </div>
+<input
+id="address"
+required
+placeholder="Số nhà, thôn/xóm, xã, huyện, tỉnh"
+>
 
-      </div>
+</div>
 
-      <p class="note">
-        Form hiện là bản demo. Khi triển khai thật sẽ kết nối nơi nhận đơn của anh.
-      </p>
 
-    </form>
+<div class="field">
 
-  </div>
+<label for="product">
+Chọn sản phẩm
+</label>
+
+<select id="product">
+
+<option>
+1 hộp 350ml – 189.000đ
+</option>
+
+<option>
+Combo 2 hộp – 349.000đ
+</option>
+
+<option>
+Combo 3 hộp – 489.000đ
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label for="note">
+Ghi chú
+</label>
+
+<input
+id="note"
+placeholder="Ví dụ: gọi trước khi giao"
+>
+
+</div>
+
+
+<div class="full">
+
+<button class="submit" type="submit">
+GỬI THÔNG TIN ĐẶT HÀNG
+</button>
+
+</div>
+
+
+</div>
+
+<p class="note">
+Form hiện là bản demo. Khi triển khai thật sẽ kết nối nơi nhận đơn của anh.
+</p>
+
+</form>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-  <strong>
-    ỚT GIÓ NGÂM DẤM NHO QUẾ
-  </strong>
+<strong>
+ỚT GIÓ NGÂM DẤM NHO QUẾ
+</strong>
 
-  <br>
+<br>
 
-  Đặc sản vùng cao Hà Giang
+Đặc sản vùng cao Hà Giang
 
 </footer>
 
 
+<!-- ================= STICKY ================= -->
+
 <a class="sticky" href="#dat-hang">
-  🌶️ ĐẶT HÀNG – TỪ 189.000đ
+🌶️ ĐẶT HÀNG – TỪ 189.000đ
 </a>
 
 
@@ -856,27 +848,26 @@ footer strong{
 
 function submitOrder(e){
 
-  e.preventDefault();
+    e.preventDefault();
 
-  const name =
-    document.getElementById('name').value.trim();
+    const name =
+        document.getElementById('name').value.trim();
 
-  const phone =
-    document.getElementById('phone').value.trim();
+    const phone =
+        document.getElementById('phone').value.trim();
 
-  const product =
-    document.getElementById('product').value;
+    const product =
+        document.getElementById('product').value;
 
-  alert(
-    'Đã nhận thông tin demo của ' +
-    name +
-    '\nSản phẩm: ' +
-    product +
-    '\nSĐT: ' +
-    phone +
-    '\n\nBước tiếp theo có thể kết nối form với hệ thống nhận đơn.'
-  );
-
+    alert(
+        'Đã nhận thông tin demo của ' +
+        name +
+        '\nSản phẩm: ' +
+        product +
+        '\nSĐT: ' +
+        phone +
+        '\n\nBước tiếp theo có thể kết nối form với hệ thống nhận đơn.'
+    );
 }
 
 </script>
