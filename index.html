@@ -2,15 +2,23 @@
 <html lang="vi">
 
 <head>
+
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="description"
-content="Ớt Gió Ngâm Dấm Nho Quế - đặc sản vùng cao Hà Giang.">
+<meta
+name="description"
+content="Ớt Gió Ngâm Dấm Nho Quế - đặc sản vùng cao Hà Giang."
+>
 
 <title>Ớt Gió Ngâm Dấm Nho Quế | Hà Giang</title>
 
 <style>
+
+/* =========================
+ROOT
+========================= */
 
 :root{
 --g:#0b6b45;
@@ -874,6 +882,7 @@ padding:20px 16px
 }
 
 </style>
+
 </head>
 
 
@@ -889,9 +898,13 @@ HEADER
 <div class="wrap hi">
 
 <a class="logo" href="#top">
+
 ỚT GIÓ NGÂM DẤM
+
 <span>NHO QUẾ · HÀ GIANG</span>
+
 </a>
+
 
 <nav>
 
@@ -990,18 +1003,29 @@ TRUST
 <div class="wrap tg">
 
 <div class="ti">
+
 <b>Ớt gió vùng cao</b>
+
 <span>Nguyên liệu gắn với Hà Giang</span>
+
 </div>
 
+
 <div class="ti">
+
 <b>OCOP 4 sao</b>
+
 <span>Theo hồ sơ giới thiệu sản phẩm</span>
+
 </div>
 
+
 <div class="ti">
+
 <b>Đóng gói hoàn thiện</b>
+
 <span>Sẵn dùng hoặc làm quà</span>
+
 </div>
 
 </div>
@@ -1604,7 +1628,7 @@ phát sóng ngày 22/09/2017.
 <a
 href="https://vtv.vn/video/noi-khong-voi-thuc-pham-ban-20h40-22-9-2017-248548.htm"
 target="_blank"
-rel="noopener"
+rel="noopener noreferrer"
 >
 ▶ XEM PHÓNG SỰ VTV
 </a>
@@ -1848,7 +1872,6 @@ JAVASCRIPT
 
 <script>
 
-
 /* =====================================================
 CHỌN SẢN PHẨM
 ===================================================== */
@@ -1856,14 +1879,18 @@ CHỌN SẢN PHẨM
 function selectProduct(value){
 
 const product =
-document.getElementById('product');
+document.getElementById("product");
+
+if(product){
 
 product.value = value;
 
+}
+
 document
-.getElementById('order')
+.getElementById("order")
 .scrollIntoView({
-behavior:'smooth'
+behavior:"smooth"
 });
 
 }
@@ -1876,16 +1903,16 @@ MỞ CHỨNG NHẬN
 function openCert(src){
 
 const modal =
-document.getElementById('modal');
+document.getElementById("modal");
 
 const image =
-document.getElementById('modalImg');
+document.getElementById("modalImg");
 
 image.src = src;
 
-modal.classList.add('on');
+modal.classList.add("on");
 
-document.body.style.overflow = 'hidden';
+document.body.style.overflow = "hidden";
 
 }
 
@@ -1897,11 +1924,11 @@ document.body.style.overflow = 'hidden';
 function closeCert(){
 
 const modal =
-document.getElementById('modal');
+document.getElementById("modal");
 
-modal.classList.remove('on');
+modal.classList.remove("on");
 
-document.body.style.overflow = '';
+document.body.style.overflow = "";
 
 }
 
@@ -1909,17 +1936,22 @@ document.body.style.overflow = '';
 /* CLICK NÚT X */
 
 document
-.getElementById('closeModal')
-.addEventListener('click',closeCert);
+.getElementById("closeModal")
+.addEventListener(
+"click",
+closeCert
+);
 
 
 /* CLICK RA NGOÀI ẢNH */
 
 document
-.getElementById('modal')
-.addEventListener('click',function(e){
+.getElementById("modal")
+.addEventListener(
+"click",
+function(e){
 
-if(e.target.id === 'modal'){
+if(e.target.id === "modal"){
 
 closeCert();
 
@@ -1930,9 +1962,11 @@ closeCert();
 
 /* ESC */
 
-document.addEventListener('keydown',function(e){
+document.addEventListener(
+"keydown",
+function(e){
 
-if(e.key === 'Escape'){
+if(e.key === "Escape"){
 
 closeCert();
 
@@ -1942,12 +1976,21 @@ closeCert();
 
 
 /* =====================================================
-FORM ĐẶT HÀNG
+FORM
 ===================================================== */
 
-document
-.getElementById('orderForm')
-.addEventListener('submit',submitOrder);
+const orderForm =
+document.getElementById("orderForm");
+
+
+if(orderForm){
+
+orderForm.addEventListener(
+"submit",
+submitOrder
+);
+
+}
 
 
 /* =====================================================
@@ -1960,53 +2003,54 @@ e.preventDefault();
 
 
 const form =
-document.getElementById('orderForm');
+document.getElementById("orderForm");
+
 
 const btn =
-document.getElementById('submitButton');
+document.getElementById("submitButton");
 
 
-/* -------------------------------------
+/* =========================
 LẤY DỮ LIỆU
-------------------------------------- */
+========================= */
 
 const name =
 document
-.getElementById('name')
+.getElementById("name")
 .value
 .trim();
 
 
 const phone =
 document
-.getElementById('phone')
+.getElementById("phone")
 .value
 .trim();
 
 
 const address =
 document
-.getElementById('address')
+.getElementById("address")
 .value
 .trim();
 
 
 const product =
 document
-.getElementById('product')
+.getElementById("product")
 .value;
 
 
 const note =
 document
-.getElementById('note')
+.getElementById("note")
 .value
 .trim();
 
 
-/* -------------------------------------
+/* =========================
 KIỂM TRA
-------------------------------------- */
+========================= */
 
 if(
 !name ||
@@ -2016,7 +2060,7 @@ if(
 ){
 
 alert(
-'Vui lòng nhập đầy đủ họ tên, số điện thoại, địa chỉ và sản phẩm.'
+"Vui lòng nhập đầy đủ họ tên, số điện thoại, địa chỉ và sản phẩm."
 );
 
 return;
@@ -2024,38 +2068,37 @@ return;
 }
 
 
-/* -------------------------------------
+/* =========================
 CHUẨN HÓA SĐT
-------------------------------------- */
+========================= */
 
 let cleanPhone =
 phone
-.replace(/\s+/g,'')
-.replace(/[().-]/g,'');
+.replace(/\s+/g,"")
+.replace(/[().-]/g,"");
 
 
-/*
-Nếu khách nhập +84xxxxxxxxx
-chuyển thành 0xxxxxxxxx
-*/
-
-if(cleanPhone.startsWith('+84')){
+if(
+cleanPhone.startsWith("+84")
+){
 
 cleanPhone =
-'0' +
+"0" +
 cleanPhone.substring(3);
 
 }
 
 
-/* -------------------------------------
-KIỂM TRA SĐT VIỆT NAM
-------------------------------------- */
+/* =========================
+KIỂM TRA SĐT
+========================= */
 
-if(!/^0\d{9}$/.test(cleanPhone)){
+if(
+!/^0\d{9}$/.test(cleanPhone)
+){
 
 alert(
-'Số điện thoại chưa đúng định dạng.\n\nAnh/chị vui lòng kiểm tra lại.'
+"Số điện thoại chưa đúng định dạng.\n\nVui lòng kiểm tra lại."
 );
 
 return;
@@ -2063,9 +2106,9 @@ return;
 }
 
 
-/* -------------------------------------
-DỮ LIỆU GỬI API
-------------------------------------- */
+/* =========================
+DỮ LIỆU ĐƠN
+========================= */
 
 const order = {
 
@@ -2079,76 +2122,104 @@ product:product,
 
 note:note,
 
-source:'landing-page-ot-gio',
+source:"landing-page-ot-gio",
 
 created_at:new Date().toISOString()
 
 };
 
 
-/* -------------------------------------
+/* =========================
+DEBUG
+========================= */
+
+console.log(
+"ORDER DATA:",
+order
+);
+
+
+/* =========================
 KHÓA NÚT
-------------------------------------- */
+========================= */
 
 btn.disabled = true;
 
 btn.textContent =
-'ĐANG GỬI ĐƠN...';
-
-
-/* -------------------------------------
-API VERCEL
-------------------------------------- */
-
-const ORDER_ENDPOINT =
-'/api/order';
+"ĐANG GỬI ĐƠN...";
 
 
 try{
 
 
-/* -----------------------------------
+/* =========================
 GỌI API
------------------------------------ */
+========================= */
 
 const response =
 await fetch(
-ORDER_ENDPOINT,
+"/api/order",
 {
-method:'POST',
+
+method:"POST",
 
 headers:{
-'Content-Type':'application/json'
+"Content-Type":"application/json",
+"Accept":"application/json"
 },
 
-body:JSON.stringify(order)
+body:
+JSON.stringify(order)
+
 }
 );
 
 
-/* -----------------------------------
-ĐỌC RESPONSE AN TOÀN
------------------------------------ */
+/* =========================
+ĐỌC RESPONSE
+========================= */
 
-const result =
-await response
-.json()
-.catch(function(){
-
-return {};
-
-});
+const text =
+await response.text();
 
 
 console.log(
-'ORDER RESPONSE:',
-result
+"API STATUS:",
+response.status
 );
 
 
-/* -----------------------------------
-API LỖI
------------------------------------ */
+console.log(
+"API RESPONSE:",
+text
+);
+
+
+let result = {};
+
+
+try{
+
+result =
+JSON.parse(text);
+
+}catch(jsonError){
+
+console.error(
+"JSON ERROR:",
+jsonError
+);
+
+throw new Error(
+"Máy chủ không trả dữ liệu JSON hợp lệ."
+);
+
+}
+
+
+/* =========================
+KIỂM TRA API
+========================= */
 
 if(
 !response.ok ||
@@ -2156,77 +2227,74 @@ result.success !== true
 ){
 
 console.error(
-'ORDER ERROR:',
+"ORDER API ERROR:",
 result
 );
+
 
 throw new Error(
 result.error ||
 result.message ||
-'Không gửi được đơn hàng'
+"Không tạo được đơn hàng."
 );
 
 }
 
 
-/* -----------------------------------
+/* =========================
 THÀNH CÔNG
------------------------------------ */
+========================= */
+
+console.log(
+"ORDER SUCCESS:",
+result
+);
+
 
 alert(
 
-'ĐẶT HÀNG THÀNH CÔNG!\n\n' +
+"ĐẶT HÀNG THÀNH CÔNG!\n\n" +
 
-'Sản phẩm: ' +
-order.product +
+"Sản phẩm: " +
+product +
 
-'\n\n' +
+"\n\n" +
 
-'Đơn hàng đã được gửi vào Pancake.\n' +
+"Đơn hàng đã được gửi vào hệ thống.\n" +
 
-'Shop sẽ liên hệ lại để xác nhận đơn hàng.'
+"Shop sẽ liên hệ lại để xác nhận đơn hàng."
 
 );
 
 
-/* -----------------------------------
-RESET FORM
------------------------------------ */
+/* =========================
+RESET
+========================= */
 
 form.reset();
-
-
-/* -----------------------------------
-QUAY VỀ FORM
------------------------------------ */
-
-document
-.getElementById('order')
-.scrollIntoView({
-behavior:'smooth'
-});
 
 
 }catch(error){
 
 
 console.error(
-'SUBMIT ORDER ERROR:',
+"SUBMIT ORDER ERROR:",
 error
 );
 
 
-/* -----------------------------------
-HIỂN THỊ LỖI
------------------------------------ */
-
 alert(
 
-'CHƯA GỬI ĐƯỢC ĐƠN\n\n' +
+"CHƯA GỬI ĐƯỢC ĐƠN!\n\n" +
 
-'Có lỗi khi kết nối với hệ thống đặt hàng.\n\n' +
+"Lý do:\n" +
 
-'Anh/chị vui lòng thử lại sau ít phút.'
+(error.message ||
+"Lỗi kết nối hệ thống.") +
+
+"\n\n" +
+
+"Vui lòng thử lại."
 
 );
 
@@ -2234,20 +2302,21 @@ alert(
 }finally{
 
 
-/* -----------------------------------
+/* =========================
 MỞ LẠI NÚT
------------------------------------ */
+========================= */
 
 btn.disabled = false;
 
 btn.textContent =
-'GỬI THÔNG TIN ĐẶT HÀNG';
+"GỬI THÔNG TIN ĐẶT HÀNG";
 
 }
 
 }
 
 </script>
+
 
 </body>
 
